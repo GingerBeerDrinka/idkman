@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A digital care package, just for Hannah." />
+  <title>Hannah's Affirmation Garden 🌸</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="container" data-testid="main-container">
+
+    <!-- ── HERO HEADER ── -->
+    <header class="hero" data-testid="main-header">
+      <p class="sparkle-row" aria-hidden="true">✨ &nbsp; ✨ &nbsp; ✨</p>
+      <h1>Hey, Hannah 🌸</h1>
+      <p class="subtitle">
+        Your garden is in full bloom, bestie. Every little flower, bubble, and
+        card is holding something just for you. Click around and see what grows.
+      </p>
+      <p class="hint" aria-label="Tap any item to reveal your message">
+        Tap anything to reveal your message 💕
+      </p>
+    </header>
+
+    <!-- ── GARDEN GRID ── -->
+    <section
+      id="garden"
+      class="garden"
+      data-testid="garden-grid"
+      aria-label="Affirmation Garden"
+    >
+      <!-- Dynamically populated by script.js -->
+    </section>
+
+  </main>
+
+  <!-- ── MODAL ── -->
+  <div
+    id="modal-overlay"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-labelledby="modal-message"
+    data-testid="affirmation-modal"
+  >
+    <div class="modal-card" id="modal-card">
+
+      <button
+        class="modal-close-x"
+        id="modal-close-x"
+        aria-label="Close message"
+        data-testid="close-modal-x-btn"
+      >&#x2715;</button>
+
+      <div class="modal-deco" id="modal-deco" aria-hidden="true"></div>
+
+      <p
+        class="modal-message"
+        id="modal-message"
+        data-testid="modal-content-text"
+      ></p>
+
+      <button
+        class="modal-close-btn"
+        id="modal-close-btn"
+        data-testid="close-modal-btn"
+      >Back to the Garden &nbsp;🌷</button>
+
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
